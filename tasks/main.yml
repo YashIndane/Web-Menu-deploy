@@ -110,7 +110,7 @@
   - {   PATH: "/var/www/cgi-bin/create_s3.py"     }
 
 - copy:
-        src: "/root/my_key.pem"
+        src: "/root/kube-key.pem"
         dest: "/root"
         mode: "400"
 
