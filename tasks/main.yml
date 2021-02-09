@@ -69,6 +69,7 @@
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/sty.css"        , FILE_DEST: "/var/www/html"   }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/spl.html"  , FILE_DEST: "/var/www/html"   }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/JS/nat1.js"     , FILE_DEST: "/var/www/html"   }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/JS/home.js" ,    FILE_DEST: "/var/www/html"    }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/JS/dk.js"       , FILE_DEST: "/var/www/html"   }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/Images/backgro.png", FILE_DEST: "/var/www/html"   }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/Images/dk.png" , FILE_DEST: "/var/www/html"    }
@@ -83,6 +84,7 @@
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/awsr_ansible.py",FILE_DEST: "/var/www/cgi-bin" }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/create_sg.py"  , FILE_DEST: "/var/www/cgi-bin" }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/create_s3.py"  , FILE_DEST: "/var/www/cgi-bin" }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/m.py" , FILE_DEST: "/var/www/cgi-bin"          }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/start_ins.yml" , FILE_DEST: "/ansible-scripts"          }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/configure_backend.yml" , FILE_DEST: "/ansible-scripts"  }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/install_HAproxy.yml" ,   FILE_DEST: "/ansible-scripts"  }
@@ -108,6 +110,7 @@
   - {   PATH: "/var/www/cgi-bin/awsr_ansible.py"  }
   - {   PATH: "/var/www/cgi-bin/create_sg.py"     }
   - {   PATH: "/var/www/cgi-bin/create_s3.py"     }
+  - {   PATH: "/var/www/cgi-bin/m.py"             }
 
 - copy:
         src: "/root/kube-key.pem"
