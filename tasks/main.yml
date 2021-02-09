@@ -76,15 +76,19 @@
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/aw.html" ,  FILE_DEST: "/var/www/html"    }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/lbin.html" , FILE_DEST: "/var/www/html"    }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/JS/voice_lb.js", FILE_DEST: "/var/www/html"    }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/JS/mini.js", FILE_DEST: "/var/www/html"    }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/start_instance.html" , FILE_DEST: "/var/www/html"   }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/sgc.html" , FILE_DEST: "/var/www/html"    }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/cs3.html" , FILE_DEST: "/var/www/html"    }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/mini.html", FILE_DEST: "/var/www/html"    }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/html/misc.html", FILE_DEST: "/var/www/html"    }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/drun.py" , FILE_DEST: "/var/www/cgi-bin"       }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/createLB.py" ,   FILE_DEST: "/var/www/cgi-bin" }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/awsr_ansible.py",FILE_DEST: "/var/www/cgi-bin" }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/create_sg.py"  , FILE_DEST: "/var/www/cgi-bin" }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/create_s3.py"  , FILE_DEST: "/var/www/cgi-bin" }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/m.py" , FILE_DEST: "/var/www/cgi-bin"          }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/set_up_minikube.py" , FILE_DEST: "/var/www/cgi-bin"         }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/start_ins.yml" , FILE_DEST: "/ansible-scripts"          }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/configure_backend.yml" , FILE_DEST: "/ansible-scripts"  }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/install_HAproxy.yml" ,   FILE_DEST: "/ansible-scripts"  }
@@ -94,6 +98,7 @@
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/start_LB.yml" ,          FILE_DEST: "/ansible-scripts"  }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/create_sg.yml" ,             FILE_DEST: "/ansible-scripts"  }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/create_s3.yml" ,             FILE_DEST: "/ansible-scripts"  }
+  - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/mini.yml" ,             FILE_DEST: "/ansible-scripts"  }
   - {   FILE_URL: "https://raw.githubusercontent.com/YashIndane/Web-Menu/main/ansible-playbooks/ansible.cfg" , FILE_DEST: "/etc/ansible"   } 
 
 - file:
@@ -111,6 +116,7 @@
   - {   PATH: "/var/www/cgi-bin/create_sg.py"     }
   - {   PATH: "/var/www/cgi-bin/create_s3.py"     }
   - {   PATH: "/var/www/cgi-bin/m.py"             }
+  - {   PATH: "/var/www/cgi-bin/set_up_minikube.py" }
 
 - copy:
         src: "/root/kube-key.pem"
@@ -141,6 +147,8 @@
   - {   FILE_PATH_: "/var/www/html/start_instance.html"   }
   - {   FILE_PATH_: "/var/www/html/sgc.html"    }
   - {   FILE_PATH_: "/var/www/html/cs3.html"    }
+  - {   FILE_PATH_: "/var/www/html/mini.html"   }
+  - {   FILE_PATH_: "/var/www/html/misc.html"   }
 
 
 - lineinfile:
